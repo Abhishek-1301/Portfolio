@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+.home,.project,.contact{
+    color: white;
+    background-color: black ;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+.navi{
+    text-decoration: none;
+    color: white;
+    /* padding-left: 50px;
+    padding-top: 20px; */
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.navi:hover{
+    scale: 1.05;
+    text-decoration: underline 2px solid white;
+}
+.container{
+    display: grid;
+    grid-template-columns: 300px 550px;
+    grid-template-rows: 100px repeat(4, 1fr);
+    grid-template-areas: 
+    "box1 box1"
+    "box2 box3"
+    "box2 box4"
+    "box2 box4"
+    "box2 box4";
+    padding: 30px;
+}
+.box:nth-child(1){
+    grid-area: box1;
+    & > h1{
+        padding-top: 10px;
+        padding-left: 100px;
+    }
+}
+.box:nth-child(2){
+    grid-area: box2;
+    & > img{
+        width: 80%;
+    border-radius: 50%;
+    position: relative;
+    left: 100px;
+    }
+}
+.box:nth-child(3){
+    grid-area: box3;
+}
+.box:nth-child(4){
+    grid-area: box4;
+}
+.box:nth-child(3),.box:nth-child(4){
+    position: relative;
+    left: 150px;
+    top: 50px;
+}
+#skills,#certifications{
+    color: black;
+    background-color: white;
+    height: 100vh;
+    & > h1{
+        padding-top: 100px;
+        padding-left: 130px;
+    }
+}
+.skillset{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    & :hover{
+        scale: 1.01;
+    }
+}
+.develop,.programming,.projectskills{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    & > ul{
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+}
+.projectskills{
+    width: 20%;
+}
+.project{
+    & > h1{
+        padding-top: 100px;
+        padding-left: 130px;
+    }
+    & > .projectDetails{
+        padding-left: 130px;
+        padding-top: 30px;
+        & > h4{
+            margin-top: 20px;
+        }
+    }
+}
+dd{
+    padding-top: 20px;
+}
+.badges{
+    img{
+        width: 10%;
+        margin-left: 150px;
+        margin-top: 50px;
+    }
+    img:hover{
+        scale: 1.1;
+    }
+    h4{
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+}
+.firstRow,.secondRow{
+    display: flex;
+}
+.contact{
+    padding-left: 50px;
+    h1{
+        padding-top: 100px;
+        padding-left: 130px;
+    }
+    h4:hover{
+        scale: 1.02;
+    }
+    .contactDetails{
+        h4{
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        #mail{
+            margin-left: 30px;
+        }
+        display: flex;
+        padding-left: 150px;
+        padding-top: 50px;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
